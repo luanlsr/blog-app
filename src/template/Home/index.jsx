@@ -12,7 +12,7 @@ function Home() {
   const [allPosts, setAllPosts] = useState([])
   const [isDisabled, setIsDisabled] = useState(false)
   const [page, setPage] = useState(0)
-  const [postsPerPage] = useState(3)
+  const [postsPerPage] = useState(18)
   const [searchValue, setSearchValue] = useState('')
 
   const labels = {
