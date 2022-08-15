@@ -19,8 +19,6 @@ function Home() {
     textButton: 'Load More Posts'
   }
   
-
-  
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
     const postAndPhotos = await fetchPosts()
     setPosts(postAndPhotos.slice(page, postsPerPage))
@@ -31,7 +29,8 @@ function Home() {
     handleLoadPosts(0, postsPerPage)
   }, [handleLoadPosts, postsPerPage])
 
-  const loadMorePosts = () => {
+  const loadMorePosts = (e) => {
+    console.log(e);
     const nextPage = page + postsPerPage
     const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage)
 
