@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import {Button} from './index.jsx'
+import {Button} from '../index.jsx'
 import userEvent from '@testing-library/user-event'
 
 describe('<Button/>' , () => {
@@ -42,7 +42,7 @@ describe('<Button/>' , () => {
         expect(button).toBeDisabled()
     })
 
-    it('5 - should button is enabled when disabled is false', () => {
+    it('5 -  should button is enabled when disabled is false', () => {
         render(<Button text="Load More" disabled={false}/>)
 
         const button = screen.getByRole('button', { name: /load more/i })
