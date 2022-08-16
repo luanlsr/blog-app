@@ -63,7 +63,7 @@ function Home() {
           <h1>Search value: {searchValue}</h1><br/>
         </>
       )}
-      <SearchBar type={'search'} placeholder={'Pesquisar...'} value={searchValue} onChange={handleChange}/>
+      <SearchBar type={'search'} placeholder={'type your search'} searchValue={searchValue} onChange={handleChange}/>
       {filteredPosts.length > 0 
         ? <Posts posts={filteredPosts}/>
         : <p>Não existem posts =(</p>

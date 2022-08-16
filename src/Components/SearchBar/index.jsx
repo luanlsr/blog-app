@@ -1,6 +1,6 @@
 import './style.css'
 
-export const SearchBar = ({type, placeholder, onChange}) => {
+export const SearchBar = ({type, placeholder, onChange, searchValue}) => {
     return(
         <>
             <input
@@ -8,6 +8,7 @@ export const SearchBar = ({type, placeholder, onChange}) => {
                 type={type} 
                 placeholder={placeholder} 
                 onChange={onChange}
+                value={searchValue}
             />
         </>
     )
